@@ -4,7 +4,7 @@ $(document).ready(function(){
 	//--------------
 	
 	var body = $('html, body');
-	var scrollSpeed = 1500;
+	var scrollSpeed = 1600;
 	
 	//--------------
 	//	!Menu transformation & Back to top		
