@@ -10,7 +10,7 @@ $(document).ready(function(){
 	//	!Menu transformation & Back to top		
 	//--------------
 	
-	$(window).scroll(function(){
+	$(window).scroll(function( event ){
 		if ($(this).scrollTop() > 10) {
 			$('.backTop').addClass('show');
 			$('.header').removeClass('transHeader');
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		$('.logoWhite').addClass('makeOrange');
 	}
 	
-	$('.backTop').click(function(){
+	$('.backTop').click(function( event ){
 		body.animate({
 			scrollTop : 0
 			},
@@ -41,7 +41,7 @@ $(document).ready(function(){
 	//	!Menu		
 	//--------------
 	
-	$('.home a').click(function(){
+	$('.home a').click(function( event ){
 		event.preventDefault();
 		
 		body.stop().animate({
@@ -52,7 +52,7 @@ $(document).ready(function(){
 		);
 	});
 	
-	$('.about a').click(function(){
+	$('.about a').click(function( event ){
 		event.preventDefault();
 		
 		body.stop().animate({
@@ -63,7 +63,7 @@ $(document).ready(function(){
 		);
 	});
 	
-	$('.portfolio a').stop().click(function(){
+	$('.portfolio a').stop().click(function( event ){
 		event.preventDefault();
 		
 		body.animate({
@@ -74,7 +74,7 @@ $(document).ready(function(){
 		);
 	});
 	
-	$('.contact a').stop().stop().click(function(){
+	$('.contact a').stop().stop().click(function( event ){
 		event.preventDefault();
 		
 		body.animate({
