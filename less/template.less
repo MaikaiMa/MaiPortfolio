@@ -186,6 +186,7 @@ a.backTop{
 	margin-top: 17px;
 	padding: 5px;
 	float: right;
+	z-index: 15;
 	
 	background: @mainOrange;
 	box-shadow: 0 0 20px -8px rgba(0, 0, 0, .4);
@@ -218,6 +219,7 @@ a.backTop{
 		height: 100%;
 		z-index: 5;
 		.vAlign{
+			padding: 40px 0;
 			display: inline-block;
 			display: table-cell;
 			vertical-align: middle;
@@ -266,9 +268,9 @@ a.backTop{
 					#gradient > .radial(#faba00; #e9ad00);
 				}
 				.carousel-caption{
-					position: static;
+					width: 100%;
 					padding: 0;
-					margin: auto;
+					margin: 0 auto 60px;
 					.btn{
 						font-family: @body;
 						font-size: 24px;
@@ -619,7 +621,7 @@ ul#portfolio-list{
 			text-align: left;
 			font-size: 2.5em;
 			padding-top: 120px;
-			margin-left: 5%;
+			margin-left: 10%;
 		}
 		.carousel-caption{
 			margin: 30px auto 70px;
@@ -629,7 +631,7 @@ ul#portfolio-list{
 			}
 		}
 		img{
-			width: 90%;
+			width: 80%;
 		}
 	}
 	
@@ -661,11 +663,13 @@ ul#portfolio-list{
 	
 	#home .carousel .carousel-inner .item{
 		h1{
-			text-align: center;
-			font-size: 2.5em;
-			padding-top: 100px;
+			text-align: left;
+			font-size: 2em;
+			padding-top: 120px;
+			margin-left: 10%;
 		}
 		.carousel-caption{
+			position: static;
 			margin: 30px auto 70px;
 			.btn{
 				font-size: 18px;
@@ -681,8 +685,11 @@ ul#portfolio-list{
 	#about.fullPage,
 	#portfolio.fullPage,
 	#contact.fullPage{
-	    min-height: 20px;
 	    height: auto;
+    }
+    
+    #home.fullPage{
+	    min-height: 20px;
     }
     
 	.mainMenu{
@@ -697,6 +704,41 @@ ul#portfolio-list{
 			.mobileBtn{
 				display: block;
 			}
+		}
+	}
+	
+	#about{
+		h1{
+			font-size: 2.5em;
+			margin-top: 0px;
+			background: transparent;
+			text-align: left;
+		}
+		h2{
+			font-size: 1.8em;
+			text-align: left;
+			margin-top: 40px;
+		}
+		img.portrait{
+			display: none;
+		}
+		.applicationList{
+			width: auto;
+			button img{
+				height: 40px;
+			}
+		}
+	}
+	
+	#portfolio{
+		background-color: @mainOrange;
+		img{
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 30px;
+		}
+		h1{
+			margin-top: 40px;
 		}
 	}
 	
@@ -724,6 +766,25 @@ ul#portfolio-list{
 @media (max-width: 480px) {
 	.temp-debug:after{
 		content:' Landscape phones';
+	}
+	
+	#home .carousel .carousel-inner .item{
+		h1{
+			text-align: left;
+			font-size: 1.5em;
+			padding-top: 120px;
+			margin-left: 15%;
+		}
+		.carousel-caption{
+			margin: 30px auto 70px;
+			.btn{
+				font-size: 1em;
+				padding: 10px;
+			}
+		}
+		img{
+			width: 70%;
+		}
 	}
 	
 	#home.fullPage,
