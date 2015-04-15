@@ -85,6 +85,50 @@ $(document).ready(function(){
 		);
 	});
 	
+	
+	//--------------
+	//	!Mobile Menu		
+	//--------------
+	
+	function openMenu( event ){
+		$('.mobilePage').css('left', '0%');
+		$('.lines-button').addClass('closeBtn');
+		$('.mobileLink').css({
+			'width' : '20%',
+			'height' : '100%'
+		});
+	}
+	
+	function closeMenu( event ){
+		$('.lines-button').removeClass('closeBtn');
+		$('.mobilePage').css('left', '-100%');
+		$('.mobileLink').css({
+			'width' : 'auto',
+			'height' : 'auto'
+		});
+	}
+	
+	$('.mobileLink').click( function( event ){
+		event.preventDefault();
+		
+		if( $(this).hasClass('closeBtn') ){
+			$(this).toggleClass('closeBtn');
+			closeMenu();
+		}else{
+			$(this).toggleClass('closeBtn');
+			openMenu();
+		}
+	});
+	
+	$('.closeBtn').click( function( event ){
+		if( !$(this).hasClass('mobileBtn') ){
+			$('.mobileBtn').removeClass('closeBtn');
+			closeMenu();
+		}
+	});
+	
+	
+	
 	//--------------
 	//	!Google Map		
 	//--------------

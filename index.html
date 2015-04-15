@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		<title>Maikel Mast - Interactive-, Graphic- and A/V Design</title>
 		<link rel="stylesheet" href="css/template.css" title="template" type="text/css" media="screen" />
@@ -15,6 +16,7 @@
 				<div class="row">
 				
 					<div class="col-xs-5">
+<!--
 						<div class="logo">
 							<a href="index.html" title="terug naar home">
 								<img class="logoColor" src="img/maikelmastlogo.png" alt="maikelmastlogo" width="175" height="266" />
@@ -26,6 +28,7 @@
 							<h5>Portfolio</h5>
 							<h6>Maikel Mast</h6>
 						</div>
+-->
 					</div>
 					
 					<div class="col-xs-7">
@@ -54,14 +57,42 @@
 							</ul>
 						</div>
 						
-						<a class="mobileBtn" href="#contact">
-							<span class="glyphicon glyphicon-menu-hamburger"></span>
+						<a class="mobileLink" href="#">
+							<span class="lines-button arrow arrow-left mobileBtn">
+								<span class="lines"></span>
+							</span>
 						</a>
 						
 					</div>
 				
 				</div>
 			</div>
+		</div>
+		
+		<div class="mobilePage">
+			<h1>Menu</h1>
+			<ul class="mobileMenu closeBtn">
+				<li class="home">
+					<a href="#home">
+						Welkom
+					</a>
+				</li>
+				<li class="about closeBtn">
+					<a href="#about">
+						Over mij
+					</a>
+				</li>
+				<li class="portfolio closeBtn">
+					<a href="#portfolio">
+						Portfolio
+					</a>
+				</li>
+				<li class="contact closeBtn">
+					<a href="#contact">
+						Contact
+					</a>
+				</li>
+			</ul>
 		</div>
 		
 		<!-- Home page -->
@@ -77,30 +108,64 @@
 			
 			 	<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
+					
 					<div class="item active digi">
-						<h1>DiGiCity</h1>
-						<img src="img/slider/digicity.png" alt="digicity" />
-						<div class="carousel-caption">
-							<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".digiPort">Bekijk hier DiGiCity</button>
+						<div class="container item-content">
+							
+							<div class="projectFrame">
+								<h1>DiGiCity</h1>
+								<img src="img/slider/digicity.png" alt="digicity" />
+							</div>
+							
+							<div class="row carousel-caption">
+								<div class="col-sm-6">
+									<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".digiPort">Bekijk hier DiGiCity</button>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="item dopper">
-						<h1>Dopper</h1>
-						<img src="img/slider/digicity.png" alt="dopper" />
-						<div class="carousel-caption">
-							<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".dopperPort">Bekijk hier Dopper</button>
+					
+					<div class="item valkenswaard">
+						<div class="container item-content">
+						
+							<div class="projectFrame">
+								<h1>Senioren Valkenswaard</h1>
+								<img src="img/slider/valkenswaard.png" alt="valkenswaard" />
+							</div>
+							
+							<div class="row carousel-caption">
+								<div class="col-sm-6">
+									<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".valkenswaardPort">Bekijk hier SBV</button>
+								</div>
+							</div>
 						</div>
 					</div>
+					
 					<div class="item movements">
-						<h1>Movements Group</h1>
-						<img src="img/slider/digicity.png" alt="movements" />
-						<div class="carousel-caption">
-							<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".movePort">Bekijk hier Movements</button>
+						<div class="container item-content">
+							
+							<div class="projectFrame">
+								<h1>Movements Group</h1>
+								<img src="img/slider/movements.png" alt="movements" />
+							</div>
+						
+							<div class="row carousel-caption">
+								<div class="col-sm-6">
+									<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".movePort">Bekijk hier Movements</button>
+								</div>
+							</div>
 						</div>
 					</div>
+					
 				</div>
 			
 				<!-- Controls -->
@@ -255,212 +320,124 @@
 					
 					<ul id="portfolio-list">
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/saranac" title=""><img src="portfolio_files/SaranacThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".valkenswaardPort"></a>
+							<img src="img/portfolio/thumb/valkenswaard.jpg" alt="valkenswaard" width="420" height="240" />
 							<p>
-								Saranac
+								<span>SBV</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="av">
-							<a href="http://www.newmediacampaigns.com/page/salvation-army-of-wake-county" title=""><img src="portfolio_files/NEWSALV.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".gelderPort"></a>
+							<img src="img/portfolio/thumb/geva.jpg" alt="geva" width="420" height="240" />
 							<p>
-								Salvation Army of Wake County
+								<span>Gelderland Valoriseert</span>
+								<br />
+								<span>Audio/Visueel</span>
 							</p>
 						</li>
 						
 						<li class="av">
-							<a href="http://www.newmediacampaigns.com/page/tharrington-smith" title=""><img src="portfolio_files/TSThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".sjamanPort"></a>
+							<img src="img/portfolio/thumb/sjamaan.jpg" alt="Sjamaan" width="420" height="240" />
 							<p>
-								Tharrington Smith
+								<span>Sjamaan</span>
+								<br />
+								<span>Audio/Visueel</span>
 							</p>
 						</li>
 						
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/the-morehead-cain-scholars-program" title=""><img src="portfolio_files/MoreheadThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".movePort"></a>
+							<img src="img/portfolio/thumb/movements.jpg" alt="movements" width="420" height="240" />
 							<p>
-								The Morehead-Cain Scholars Program
+								<span>Movements Group</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/josh-mandel-for-treasurer" title=""><img src="portfolio_files/TreasTHUMB.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".kerstPort"></a>
+							<img src="img/portfolio/thumb/kerstkaart.jpg" alt="kerstkaart" width="420" height="240" />
 							<p>
-								Josh Mandel for Treasurer
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/nc-marine-science" title=""><img src="portfolio_files/marineNEWNEW.gif"  alt="" /></a>
-							<p>
-								NC Marine Science
+								<span>Kerstkaart</span>
+								<br />
+								<span>Grafisch</span>
 							</p>
 						</li>
 									
 						<li class="av">
-							<a href="http://www.newmediacampaigns.com/page/raleigh-economic-development" title=""><img src="portfolio_files/RaleighThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".dopperPort"></a>
+							<img src="img/portfolio/thumb/dwangbuis.jpg" alt="dwangbuis" width="420" height="240" />
 							<p>
-								Raleigh Economic Development
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/ravenstahl-for-mayor" title=""><img src="portfolio_files/RavenstahlThumb.gif"  alt="" /></a>
-							<p>
-								Ravenstahl for Mayor
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/volt-energy" title=""><img src="portfolio_files/VoltThumb.gif"  alt="" /></a>
-							<p>
-								Volt Energy
+								<span>Dwangbuis</span>
+								<br />
+								<span>Audio/Visueel</span>
 							</p>
 						</li>
 									
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/phillips-ambassadors" title=""><img src="portfolio_files/PhillipsThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".dopperPort"></a>
+							<img src="img/portfolio/thumb/dopper.jpg" alt="dopper" width="420" height="240" />
 							<p>
-								Phillips Ambassadors
-							</p>
-						</li>
-									
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/story-house-productions" title=""><img src="portfolio_files/NEWSTORY.gif"  alt="" /></a>
-							<p>
-								Story House Productions
-							</p>
-						</li>
-									
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/conectiv-energy" title=""><img src="portfolio_files/ConectivThumb.gif"  alt="" /></a>
-							<p>
-								Conectiv Energy
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/vote-the-site" title=""><img src="portfolio_files/VoteThumb.gif"  alt="" /></a>
-							<p>
-								Vote the Site
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/mustaches-for-kids-charlotte" title=""><img src="portfolio_files/MustacheThumb.gif"  alt="" /></a>
-							<p>
-								Mustaches for Kids Charlotte
+								<span>Dopper</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/larry-joe-doherty1" title=""><img src="portfolio_files/Larry-Joe-Small.jpg"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".digiPort"></a>
+							<img src="img/portfolio/thumb/digicity.jpg" alt="digicity" width="420" height="240" />
 							<p>
-								Larry Joe Doherty
+								<span>DigiCity</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/ecu-economic-development" title=""><img src="portfolio_files/ECUThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".appaPort"></a>
+							<img src="img/portfolio/thumb/apparelle.jpg" alt="apparelle" width="420" height="240">
 							<p>
-								ECU Economic Development
+								<span>Apparelle</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/walter-boasso" title=""><img src="portfolio_files/BoassoThumb.gif"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".blobPort"></a>
+							<img src="img/portfolio/thumb/blob.jpg" alt="blob" width="420" height="240">
 							<p>
-								Walter Boasso
+								<span>De blob</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/north-carolina-beer-and-wine-wholesalers-association1" title=""><img src="portfolio_files/North-Carolina-Beer-and-Wine-Wholesalers-Association-Small.jpg"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".kidsPort"></a>
+							<img src="img/portfolio/thumb/kidesweek.jpg" alt="kidesweek" width="420" height="240" />
 							<p>
-								North Carolina Beer and Wine Wholesalers Association
+								<span>Kidsweek</span>
+								<br />
+								<span>Interactief</span>
 							</p>
 						</li>
 						
 						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/project-extra-mile1" title=""><img src="portfolio_files/Project-Extra-Mile-Small.jpg"  alt="" /></a>
+							<a href="#" data-toggle="modal" data-target=".dodgePort"></a>
+							<img src="img/portfolio/thumb/dodge.jpg" alt="dodge" width="420" height="240" />
 							<p>
-								Project Extra Mile
-							</p>
-						</li>
-						
-						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/ronald-mcdonald-house-of-north-carolina" title=""><img src="portfolio_files/McDonaldThumb.gif"  alt="" /></a>
-							<p>
-								Ronald McDonald House of North Carolina
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/lucy-daniels-center" title=""><img src="portfolio_files/NEWLUCY.gif"  alt="" /></a>
-							<p>
-								Lucy Daniels Center
-							</p>
-						</li>
-						
-						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/nc-literary-festival" title=""><img src="portfolio_files/NCLiteraryThumb.gif"  alt="" /></a>
-							<p>
-								NC Literary Festival
-							</p>
-						</li>
-					
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/recess-framework" title=""><img src="portfolio_files/RecessThumb.gif"  alt="" /></a>
-							<p>
-								Recess Framework
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/wake-county-economic-development" title=""><img src="portfolio_files/WakeThumb.gif"  alt="" /></a>
-							<p>
-								Wake County Economic Development
-							</p>
-						</li>
-						
-						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/friends-of-wake-county1" title=""><img src="portfolio_files/NEWFRIENDS.gif"  alt="" /></a>
-							<p>
-								Friends of Wake County
-							</p>
-						</li>
-						
-						<li class="graphic">
-							<a href="http://www.newmediacampaigns.com/page/ufcw-local-1500" title=""><img src="portfolio_files/UFCW-Small.jpg"  alt="" /></a>
-							<p>
-								UFCW Local 1500
-							</p>
-						</li>
-						
-						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/pr-2020" title=""><img src="portfolio_files/PR20Thumb.gif"  alt="" /></a>
-							<p>
-								PR 20/20
-							</p>
-						</li>
-						
-						<li class="interactive">
-							<a href="http://www.newmediacampaigns.com/page/joe-simitian" title=""><img src="portfolio_files/SimitianThumb.gif"  alt="" /></a>
-							<p>
-								Joe Simitian
-							</p>
-						</li>
-						
-						<li class="av">
-							<a href="http://www.newmediacampaigns.com/page/foster-friess" title=""><img src="portfolio_files/NewFriessThumb.gif"  alt="" /></a>
-							<p>
-								Foster Friess
-							</p>
-						</li>
-						
-						<li class="av">
-							<a href="http://www.newmediacampaigns.com/page/polk-citizens-for-good-government" title=""><img src="portfolio_files/PolkThumb.gif"  alt="" /></a>
-							<p>
-								Polk Citizens for Good Government
+								<p>
+									<span>Dodge Challenger</span>
+									<br />
+									<span>Grafisch</span>
+								</p>
 							</p>
 						</li>
 						
@@ -468,115 +445,6 @@
 					</ul>
 				</div>
 					
-			</div>
-		</div>
-		
-		<!-- Portfolio items -->
-		<!-- DiGiCity -->
-		<div class="modal fade digiPort" tabindex="-1" role="dialog" aria-labelledby="digiModal" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="digiModal">DiGiCity</h1>
-					</div>
-					<div class="modal-body">
-						
-						<div class="imgLink">
-							<a href="img/portfolio/sites/digicity/landing.php" title="digicity redesign" target="_blank">
-								<img src="img/portfolio/digicity.jpg" alt="digicity" width="1920" height="1080" />
-							</a>
-							<div class="imgLinkText">Demo</div>
-						</div>
-						
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						
-						<p>
-							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
-							<a href="img/portfolio/sites/digicity/landing.php" title="digicity redesign" target="_blank">
-								hier
-							</a> 
-							te klikken.
-						</p>
-						
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Dopper -->
-		<div class="modal fade dopperPort" tabindex="-1" role="dialog" aria-labelledby="dopperModal" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="dopperModal">Dopper</h1>
-					</div>
-					<div class="modal-body">
-						
-						<div class="imgLink">
-							<a href="img/portfolio/sites/dopper/index.html" title="dopper website" target="_blank">
-								<img src="img/portfolio/dopper.png" alt="dopper" width="1920" height="1080" />
-							</a>
-							<div class="imgLinkText">Demo</div>
-						</div>
-						
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						
-						<p>
-							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
-							<a href="img/portfolio/sites/dopper/index.html" title="dopper website" target="_blank">
-								hier
-							</a> 
-							te klikken.
-						</p>
-						
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Movements Group -->
-		<div class="modal fade movePort" tabindex="-1" role="dialog" aria-labelledby="moveModal" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="moveModal">Movements Group</h1>
-					</div>
-					<div class="modal-body">
-						
-						<div class="imgLink">
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
-							</a>
-							<div class="imgLinkText">Website</div>
-						</div>
-						
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						
-						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
-						</p>
-						
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
 			</div>
 		</div>
 		
@@ -636,182 +504,450 @@
 							</li>
 						</ul>
 					</div>
-					
-					<div class="col-md-9">
-						<h3>Projecten</h3>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Movements
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									De Blob
-								</a>
-							</li>
-						</ul>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									DiGiCity
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Dopper
-								</a>
-							</li>
-						</ul>
-					</div>
 				</div>
-				
 			</div>
 		</div>
 		
 		<a href="#" title="Reset de pagina naar de begin positie" class="backTop"> Back to top </a>
+		
+		
+		<!--------------------------//
+		//							//
+		//		Portfolio items		//
+		//							//
+		//--------------------------!>
+		
+		<!-- DiGiCity -->
+		<div class="modal fade digiPort" tabindex="-1" role="dialog" aria-labelledby="digiModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="digiModal">DiGiCity</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="img/portfolio/sites/digicity/landing.php" title="digicity redesign" target="_blank">
+								<img src="img/portfolio/digicity.jpg" alt="digicity" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Demo</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
+							<a href="img/portfolio/sites/digicity/landing.php" title="digicity redesign" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Dopper -->
+		<div class="modal fade dopperPort" tabindex="-1" role="dialog" aria-labelledby="dopperModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="valkenswaardModal">Dopper</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
+								<img src="img/portfolio/dopper.png" alt="valkenswaard" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Demo</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
+							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Senioren Valkenswaard -->
+		<div class="modal fade valkenswaardPort" tabindex="-1" role="dialog" aria-labelledby="valkenswaardModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="valkenswaardModal">Seniorenbelang Valkenswaard</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
+								<img src="img/portfolio/dopper.png" alt="valkenswaard" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Demo</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
+							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Movements Group -->
+		<div class="modal fade movePort" tabindex="-1" role="dialog" aria-labelledby="moveModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Movements Group</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Gelderland Valoriseert -->
+		<div class="modal fade gelderPort" tabindex="-1" role="dialog" aria-labelledby="gelderModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Gelderland Valoriseert</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Sjamanistisch ritueel -->
+		<div class="modal fade sjamanPort" tabindex="-1" role="dialog" aria-labelledby="sjamanModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Sjamanistisch ritueel</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Kerstkaart -->
+		<div class="modal fade kerstPort" tabindex="-1" role="dialog" aria-labelledby="kerstModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Kerstkaart</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Dwangbuis -->
+		<div class="modal fade dwangPort" tabindex="-1" role="dialog" aria-labelledby="dwangModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Dwangbuis</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Apparelle -->
+		<div class="modal fade appaPort" tabindex="-1" role="dialog" aria-labelledby="appaModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Apparelle</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Kidsweek Junior -->
+		<div class="modal fade kidsPort" tabindex="-1" role="dialog" aria-labelledby="kidsModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Kidsweek Junior</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Dodge Challenger -->
+		<div class="modal fade dodgePort" tabindex="-1" role="dialog" aria-labelledby="dodgeModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">Dodge Challenger</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- De Blob -->
+		<div class="modal fade blobPort" tabindex="-1" role="dialog" aria-labelledby="blobModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="moveModal">De Blob</h1>
+					</div>
+					<div class="modal-body">
+						
+						<div class="imgLink">
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							</a>
+							<div class="imgLinkText">Website</div>
+						</div>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						
+						<p>
+							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
+								hier
+							</a> 
+							te klikken.
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
