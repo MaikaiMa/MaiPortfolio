@@ -1,134 +1,8 @@
+//--------------
+//	!Document ready	
+//--------------
+
 $(document).ready(function(){
-	//--------------
-	//	!Global		
-	//--------------
-	
-	var body = $('html, body');
-	var scrollSpeed = 1600;
-	
-	//--------------
-	//	!Menu transformation & Back to top		
-	//--------------
-	
-	$(window).scroll(function( event ){
-		if ($(this).scrollTop() > 10) {
-			$('.backTop').addClass('show');
-			$('.header').removeClass('transHeader');
-			$('.logoWhite').addClass('makeOrange');
-		} else {
-			$('.backTop').removeClass('show');
-			$('.header').addClass('transHeader');
-			$('.logoWhite').removeClass('makeOrange');
-		}
-	});
-	
-	if ($(this).scrollTop() > 10) {
-		$('.backTop').addClass('show');
-		$('.header').removeClass('transHeader');
-		$('.logoWhite').addClass('makeOrange');
-	}
-	
-	$('.backTop').click(function( event ){
-		body.animate({
-			scrollTop : 0
-			},
-			scrollSpeed
-		);
-		return false;
-	});
-	
-	//--------------
-	//	!Menu		
-	//--------------
-	
-	$('.home a').click(function( event ){
-		event.preventDefault();
-		
-		body.stop().animate({
-			scrollTop: $('#home').offset().top
-			},
-			scrollSpeed,
-			'swing'
-		);
-	});
-	
-	$('.about a').click(function( event ){
-		event.preventDefault();
-		
-		body.stop().animate({
-			scrollTop: $('#about').offset().top
-			},
-			scrollSpeed,
-			'swing'
-		);
-	});
-	
-	$('.portfolio a').stop().click(function( event ){
-		event.preventDefault();
-		
-		body.animate({
-			scrollTop: $('#portfolio').offset().top
-			},
-			scrollSpeed,
-			'swing'
-		);
-	});
-	
-	$('.contact a').stop().stop().click(function( event ){
-		event.preventDefault();
-		
-		body.animate({
-			scrollTop: $('#contact').offset().top
-			},
-			scrollSpeed,
-			'swing'
-		);
-	});
-	
-	
-	//--------------
-	//	!Mobile Menu		
-	//--------------
-	
-	function openMenu( event ){
-		$('.mobilePage').css('left', '0%');
-		$('.lines-button').addClass('closeBtn');
-		$('.mobileLink').css({
-			'width' : '20%',
-			'height' : '100%'
-		});
-	}
-	
-	function closeMenu( event ){
-		$('.lines-button').removeClass('closeBtn');
-		$('.mobilePage').css('left', '-100%');
-		$('.mobileLink').css({
-			'width' : 'auto',
-			'height' : 'auto'
-		});
-	}
-	
-	$('.mobileLink').click( function( event ){
-		event.preventDefault();
-		
-		if( $(this).hasClass('closeBtn') ){
-			$(this).toggleClass('closeBtn');
-			closeMenu();
-		}else{
-			$(this).toggleClass('closeBtn');
-			openMenu();
-		}
-	});
-	
-	$('.closeBtn').click( function( event ){
-		if( !$(this).hasClass('mobileBtn') ){
-			$('.mobileBtn').removeClass('closeBtn');
-			closeMenu();
-		}
-	});
-	
-	
-	
 	//--------------
 	//	!Google Map		
 	//--------------
@@ -140,9 +14,10 @@ $(document).ready(function(){
 		var latLng = new google.maps.LatLng(position[0], position[1]);
 	 
 		var mapOptions = {
-			zoom: 16, // initialize zoom level - the max value is 21
-			streetViewControl: false, // hide the yellow Street View pegman
-			scaleControl: true, // allow users to zoom the Google Map
+			zoom: 16,
+			streetViewControl: false,
+			draggable: false,
+			scaleControl: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			center: latLng,
 			scrollwheel: false
@@ -161,6 +36,264 @@ $(document).ready(function(){
 	}
 	 
 	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+});
+
+
+//--------------
+//	!Global		
+//--------------
+
+var body = $('html, body');
+var scrollSpeed = 1600;
+
+hideMessage();
+
+//--------------
+//	!Menu transformation & Back to top		
+//--------------
+
+$(window).scroll(function( event ){
+	if ($(this).scrollTop() > 10) {
+		$('.backTop').addClass('show');
+		$('.header').removeClass('transHeader');
+	} else {
+		$('.backTop').removeClass('show');
+		$('.header').addClass('transHeader');
+	}
+});
+
+if ($(this).scrollTop() > 10) {
+	$('.backTop').addClass('show');
+	$('.header').removeClass('transHeader');
+}
+
+$('.backTop').click(function( event ){
+	body.animate({
+		scrollTop : 0
+		},
+		scrollSpeed
+	);
+	return false;
+});
+
+$(window).scroll(function(){
+	if( $(window).scrollTop() + $(window).height() > $(document).height() - 200 ){
+		$('.backTop').addClass('stickBottom');
+	}else{
+	    $('.backTop').removeClass('stickBottom');
+    }
+});
+	
+
+//--------------
+//	!Menu		
+//--------------
+
+$('.home').stop().click(function( event ){
+	event.preventDefault();
+	
+	body.stop().animate({
+		scrollTop: $('#home').offset().top
+		},
+		scrollSpeed,
+		'swing'
+	);
+});
+
+$('.about').stop().click(function( event ){
+	event.preventDefault();
+	
+	body.stop().animate({
+		scrollTop: $('#about').offset().top
+		},
+		scrollSpeed,
+		'swing'
+	);
+});
+
+$('.portfolio').stop().click(function( event ){
+	event.preventDefault();
+	
+	body.animate({
+		scrollTop: $('#portfolio').offset().top
+		},
+		scrollSpeed,
+		'swing'
+	);
+});
+
+$('.contact').stop().click(function( event ){
+	event.preventDefault();
+	
+	body.animate({
+		scrollTop: $('#contact').offset().top
+		},
+		scrollSpeed,
+		'swing'
+	);
+});
+
+
+//--------------
+//	!Mobile Menu		
+//--------------
+
+function openMenu( event ){
+	$('.mobilePage').css('left', '0%');
+	$('.lines-button').addClass('closeBtn');
+	$('.mobileLink').css({
+		'width' : '20%',
+		'height' : '100%'
+	});
+	$('.fullPage').addClass('overlay');
+}
+
+function closeMenu( event ){
+	$('.lines-button').removeClass('closeBtn');
+	$('.mobilePage').css('left', '-100%');
+	$('.mobileLink').css({
+		'width' : 'auto',
+		'height' : 'auto'
+	});
+	$('.fullPage').removeClass('overlay');
+}
+
+$('.mobileLink').click( function( event ){
+	event.preventDefault();
+	
+	if( $(this).hasClass('closeBtn') ){
+		$(this).toggleClass('closeBtn');
+		closeMenu();
+	}else{
+		$(this).toggleClass('closeBtn');
+		openMenu();
+	}
+});
+
+$('.closeBtn').click( function( event ){
+	if( !$(this).hasClass('mobileBtn') ){
+		$('.mobileBtn').removeClass('closeBtn');
+		closeMenu();
+	}
+});
+
+
+//--------------
+//	!Error messages		
+//--------------
+
+function showMessage( message ){
+	$( '.messageBox p' ).html( message );
+	$( '.messageBox' ).show( 'slow' );
+	$( '.messageBox' ).promise().done(function(){
+		$( '.messageBox p' ).show( 'slow' );
+	});
+}
+
+$('.messageBox > i').click( hideMessage );
+
+function hideMessage(){
+	$( '.messageBox p' ).hide( 'slow' );
+	$( '.messageBox p' ).promise().done(function(){
+		$( '.messageBox' ).hide( 'slow' );
+	});
+}
+
+
+//--------------
+//	!Form		
+//--------------
+
+// Show form
+$('.formToggle').click( function( event ){
+	$('.contactText').fadeOut('slow');
+	setTimeout(function() {
+		$('.contactForm').show('slow');
+	}, 500);
+	setTimeout(function() {
+		$('.contactForm').addClass('show');
+	}, 1000);
+});
+
+// Hide form
+$('.hideForm').click( function( event ){
+	$('.contactForm').removeClass('show');
+	setTimeout(function() {
+		$('.contactForm').hide('slow');
+	}, 500);
+	setTimeout(function() {
+		$('.contactText').fadeIn('slow');
+	}, 1000);
+});
+
+// Form input fields and labels
+$( '.labelInput input' ).change( function(){
+	if($( '.labelInput input' ).val() !== ''){
+		$( this ).parent().addClass('active');
+	}else{
+		$( this ).parent().removeClass('active');
+	}
+});
+
+$( '.labelInput input' ).focus(function() {
+	$( this ).parent().addClass('active');
+	$( this ).parent().removeClass( 'error' );
+});
+
+$( '#message' ).focus(function() {
+	$( this ).removeClass( 'error' );
+});
+
+$( '.labelInput input' ).blur(function() {
+	if($( this ).val() === ''){
+		$( this ).parent().removeClass('active');
+	}
+});
+
+$( '.labelInput input' ).keyup(function(){
+	var empty = $( '.error' );
+	if(empty.length === 0){
+		hideMessage();
+	}
+});
+
+$( '#message' ).keyup(function(){
+	var empty = $( '.error' );
+	if(empty.length === 0){
+		hideMessage();
+	}
+});
+
+// Error handeling
+$('input[type="submit"]').click(function(){
+	
+	if( $('#tel').val().length !== 7 &&  $('#tel').val().length !== 10){
+		event.preventDefault();
+		var phoneError = 'Het telefoon nummer is niet correct. Het nummer moet 7 of 10 cijfers bevatten';
+		showMessage( phoneError );
+		$( '#tel' ).parent().addClass( 'error' );
+	}else{
+		$( '#tel' ).parent().removeClass( 'error' );
+	}
+	
+	if( !$('#message').val() ){
+		event.preventDefault();
+		var messageError = 'Er is geen bericht ingevuld';
+		showMessage( messageError );
+		$( '#message' ).addClass( 'error' );
+	}else{
+		$( '#message' ).removeClass( 'error' );
+	}
+	
+	$( '.labelInput input' ).each(function(){
+		if( !$( this ).val() ){
+			event.preventDefault();
+			var emptyInput = 'Een of meerdere velden zijn niet ingevuld';
+			showMessage( emptyInput );
+			$( this ).parent().addClass( 'error' );
+		}
+	});
+	
 });
 
 
