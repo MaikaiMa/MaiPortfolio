@@ -15,8 +15,7 @@
 			<div class="container">
 				<div class="row">
 				
-					<div class="col-xs-5">
-<!--
+					<div class="logoGroup">
 						<div class="logo">
 							<a href="index.html" title="terug naar home">
 								<img class="logoColor" src="img/maikelmastlogo.png" alt="maikelmastlogo" width="175" height="266" />
@@ -28,10 +27,9 @@
 							<h5>Portfolio</h5>
 							<h6>Maikel Mast</h6>
 						</div>
--->
 					</div>
 					
-					<div class="col-xs-7">
+					<div class="col-xs-7 pull-right">
 						<div class="mainMenu">
 							<ul class="nav nav-pills">
 								<li role="presentation" class="home active">
@@ -111,57 +109,78 @@
 					
 					<div class="item active digi">
 						<div class="container item-content">
+							<div class="vAlign">
 							
-							<div class="projectFrame">
-								<h1>DiGiCity</h1>
-								<img src="img/slider/digicity.png" alt="digicity" />
-							</div>
+								<div class="projectFrame">
+									<h1>DiGiCity</h1>
+									<img src="img/slider/digicity.png" alt="digicity" />
+								</div>
+								
+								<div class="row carousel-caption">
+									<div class="col-sm-6">
+										<button type="button" class="btn-icon btn-icon-light glyphicon-briefcase portfolio">
+											<a href="#portfolio">Bekijk mijn portfolio</a>
+										</button>
+									</div>
+									<div class="col-sm-6">
+										<button type="button" class="btn-icon btn-icon-dark glyphicon-share-alt" data-toggle="modal" data-target=".digiPort">
+											<a href="#">Bekijk hier DiGiCity</a>
+										</button>
+									</div>
+								</div>
 							
-							<div class="row carousel-caption">
-								<div class="col-sm-6">
-									<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
-								</div>
-								<div class="col-sm-6">
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".digiPort">Bekijk hier DiGiCity</button>
-								</div>
 							</div>
 						</div>
 					</div>
 					
 					<div class="item valkenswaard">
 						<div class="container item-content">
+							<div class="vAlign">
 						
-							<div class="projectFrame">
-								<h1>Senioren Valkenswaard</h1>
-								<img src="img/slider/valkenswaard.png" alt="valkenswaard" />
-							</div>
+								<div class="projectFrame">
+									<h1>Valkenswaard</h1>
+									<img src="img/slider/valkenswaard.png" alt="valkenswaard" />
+								</div>
+								
+								<div class="row carousel-caption">
+									<div class="col-sm-6">
+										<button type="button" class="btn-icon btn-icon-light glyphicon-briefcase portfolio">
+											<a href="#portfolio">Bekijk mijn portfolio</a>
+										</button>
+									</div>
+									<div class="col-sm-6">
+										<button type="button" class="btn-icon btn-icon-dark glyphicon-share-alt" data-toggle="modal" data-target=".valkenswaardPort">
+											<a href="#">Bekijk hier SBV</a>
+										</button>
+									</div>
+								</div>
 							
-							<div class="row carousel-caption">
-								<div class="col-sm-6">
-									<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
-								</div>
-								<div class="col-sm-6">
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".valkenswaardPort">Bekijk hier SBV</button>
-								</div>
 							</div>
 						</div>
 					</div>
 					
 					<div class="item movements">
 						<div class="container item-content">
+							<div class="vAlign">
 							
-							<div class="projectFrame">
-								<h1>Movements Group</h1>
-								<img src="img/slider/movements.png" alt="movements" />
-							</div>
-						
-							<div class="row carousel-caption">
-								<div class="col-sm-6">
-									<a href="#portfolio" class="btn btn-default portfolio">Bekijk mijn portfolio</a>
+								<div class="projectFrame">
+									<h1>Movements</h1>
+									<img src="img/slider/movements.png" alt="movements" />
 								</div>
-								<div class="col-sm-6">
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".movePort">Bekijk hier Movements</button>
+								
+								<div class="row carousel-caption">
+									<div class="col-sm-6">
+										<button type="button" class="btn-icon btn-icon-light glyphicon-briefcase portfolio">
+											<a href="#portfolio">Bekijk mijn portfolio</a>
+										</button>
+									</div>
+									<div class="col-sm-6">
+										<button type="button" class="btn-icon btn-icon-dark glyphicon-share-alt" data-toggle="modal" data-target=".movePort">
+											<a href="#">Bekijk hier Movements</a>
+										</button>
+									</div>
 								</div>
+							
 							</div>
 						</div>
 					</div>
@@ -197,7 +216,7 @@
 						<div class="col-md-12">
 							<h1>Een korte introductie</h1>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Mijn naam is Maikel Mast en ik ben een interactieve vormgever. Wat houdt dit precies in? Een vormgever - of designer - is gespecialiseerd in het ontwerpen, vormgeven en realiseren van producten. Vormgevers zijn vaak gespecialiseerd in het ontwerpen van een bepaald product of product type. De producten zijn gegroepeerd in onder andere; grafisch, audio-/visueel, interactief en kunst. Elke groep vraagt om een ander set ontwerpprincipes. Ik, als interactieve vormgever, hou me dus vooral bezig met het ontwerpen en realiseren van interactieve ervaringen.
 							</p>
 						</div>
 						
@@ -207,14 +226,17 @@
 					
 						<div class="col-md-7">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Het meeste ervaring zit in front-end development. Dit is het ontwerpen van applicaties en websites. Bij het ontwerpen moeten de juist keuze gemaakt worden met betrekking tot kleuren, posities, formaten, feedback, et cetera. Deze keuzes worden natuurlijk gemaakt op basis van bestaande onderzoeken en een klein beetje op basis van smaak. Ontwerpen is namelijk deels wetenschap en deels gevoel.
 							</p>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Een applicatie of website moet natuurlijk gerealiseerd worden. Zelf werk ik met HTML5, CSS3, JavaScript en PHP. Ook heb ik ervaring met Swift. De kans is aanwezig dat een aantal- of alle benamingen je helemaal niks zeggen. Als dat het geval is dan hoef je alleen te weten dat ik werk met de nieuwste standaarden voor de meest gebruikte programmeertalen voor front-end development. Swift is echter een programmeertaal specifiek voor het ontwikkelen van iOS applicaties.
+							</p>
+							<p>
+								Naast front-end development heb ik ook ervaring met grafisch design (folders, posters, briefpapier, etc), audio-/visuele productie en game development (Unreal en Swift).
 							</p>
 						</div>
 						
-						<div class="col-xs-2">
+						<div class="col-xs-2 cv">
 							<div class="expLabels">
 								<p>HTML5</p>
 								<p>CSS3</p>
@@ -227,7 +249,7 @@
 							</div>
 						</div>
 						
-						<div class="col-md-3">
+						<div class="col-md-3 cv">
 							<div class="progress">
 								<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
 							</div>
@@ -449,22 +471,154 @@
 		</div>
 		
 		<!-- Contact page -->
+		<div class="messageBox" style="display: block;">
+			<i class="glyphicon glyphicon-remove-circle"></i>
+			<p></p>
+		</div>
+		
 		<div id="contact" class="fullPage">
 		
 			<div id="googlemaps"></div>
 			
-			<div class="contactContent">
-				<h1>Contact</h1> <br>
-				<h3>Dus... Mijn naam is Maikel, ik ben werkzaam als designer in Nijmegen.</h3> <br>
-				<h3>Lijkt het je leuk om een keer samen te werken? Neem dan gerust contact met me op</h3> 
+			<div class="container">
+				<div class="row">
+					<div class="contactContent">
+						
+						<div class="contactText">
+							<h1>Contact</h1>
+							<h3>Dus... Mijn naam is Maikel, ik ben werkzaam als designer in Nijmegen.</h3>
+							<h3>
+								Lijkt het je leuk om een keer samen te werken?
+								<button class="btn-icon btn-icon-small glyphicon-pencil formToggle">
+									<a href="#">Neem dan gerust contact met mij op!</a>
+								</button>
+							</h3>
+						</div>
+						
+						<?php
+                    		if (isset($_POST['submit'])){
+                            	// Function to generate response
+                            	$response = '';
+                            	
+                            	function my_contact_form_generate_response($type, $message){
+                            		global $response;
+                            		
+                            		if($type == "success") $response = "<div class='alert alert-success'>{$message}</div>";
+                            		else $response = "<div class='alert alert-warning'>{$message}</div>";
+                            	}
+                            	
+                            	// Responses
+                            	$message_sent = 'Het formulier is succesvol verzonden.';
+                            	$message_unsent = 'Er ging iets mis met het versturen van de e-mail. Probeer het later opnieuw.';
+                            	$email_invalid = 'Het ingevulde e-mailadres bevat een fout.';
+                            	$missing_content = 'Niet alles is ingevuld, bekijk het formulier nogmaals.';
+                            	
+                            	// Get data
+                            	$firstname = $_POST['fname'];
+                            	$surname = $_POST['lname'];
+                            	$email = $_POST['email'];
+                            	$phone = $_POST['phone'];    
+                            	$message = $_POST['message'];
+                            	
+                            	// Mail information
+                            	$to = 'maikel.mast@gmail.com';
+                            	$subject = "Portfolio reactie: " . $firstname . " " . $surname;
+                            	$mailheader = "From: " . $email . "\r\n";
+                            	$formcontent = "Naam: " . $firstname . " " . $surname . "\n" . "Telefoonnummer: " . $phone . "\n" . "E-mail: " . $email . "\n\n" . "Bericht: \n" . $message;
+                            	$sent = mail($to, $subject, $formcontent, $mailheader);
+                            
+                            	if(isset($sent)){
+                            		my_contact_form_generate_response("success", $message_sent);
+                            	}else{ 
+                            		my_contact_form_generate_response("error", $message_unsent);
+                            	}
+                            	
+                            	echo($response);
+                        	}else{
+                        ?>
+						
+						<div class="contactForm <?php if (isset($_POST['submit'])){ echo('show'); } ?>">
+							<i class="glyphicon glyphicon-remove-circle hideForm"></i>
+							
+							<form action="" method="post">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="labelInput">
+											<label for="firstname">
+												<span class="glyphicon glyphicon-user"></span>
+												<span class="labelText">Voornaam</span>
+											</label>
+											<input id="firstname" type="text" name="fname" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="labelInput">
+											<label for="surname">
+												<span class="glyphicon glyphicon-user"></span>
+												<span class="labelText">Achternaam</span>
+											</label>
+											<input id="surname" type="text" name="lname" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="labelInput">
+											<label for="mail">
+												<span class="glyphicon glyphicon-envelope"></span>
+												<span class="labelText">E-mail</span>
+											</label>
+											<input id="mail" type="email" name="email" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="labelInput">
+											<label for="tel">
+												<span class="glyphicon glyphicon-phone"></span>
+												<span class="labelText">Telefoonnummer</span>
+											</label>
+											<input id="tel" type="tel" name="phone" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<textarea id="message" name="message" rows="10" cols="20" placeholder="Schrijf hier een bericht"></textarea>
+									</div>
+								</div>
+								<div class="row">
+                                    <!--
+									<div class="col-md-6">
+										<button  class="btn-icon btn-icon-light glyphicon-refresh">
+											<a href="#">Begin opnieuw</a>
+										</button>
+									</div>
+                                    -->
+									<div class="col-md-6 col-md-offset-6">
+										<button class="btn-icon btn-icon-dark glyphicon-send">
+											<a href="#">Verstuur de mail</a>
+											<input type="submit" class="hiddenInput" name="submit" value="Verstuur de mail" />
+										</button>
+									</div>
+								</div>
+							</form>
+							<?php
+							    }
+							?>
+						</div>
+						
+					</div>
+				</div>
 			</div>
 			
 		</div>
 		
+		<a href="#" title="Reset de pagina naar de begin positie" class="backTop"> Back to top </a>
+		
 		<!-- Footer -->
 		<div id="footer">
+    		
 			<div class="container">
-				
 				<div class="row">
 					<div class="col-md-12">
 						<h6>Copyright&copy; 2010 - 2015 Maikel Mast</h6>
@@ -472,43 +626,64 @@
 				</div>
 				
 				<div class="row">
-					<div class="col-md-2">
-						<!-- <img class="logoColor" src="img/maikelmastlogo.png" alt="maikelmastlogo" width="175" height="266" /> -->
-						<a href="index.html" title="terug naar home">
-							<img class="logoWhite" src="img/maikelmastlogowhite.png" alt="maikelmastlogo" width="175" height="266" />
-						</a>
+					<div class="col-md-4 col-md-offset-4">
+						<div class="smBox">
+						    <!--<div class="sm face">
+                                <a href="https://www.facebook.com/mastmaikel" title="persoonlijke informatie" target="_blank">
+                                    <img src="img/sm/square/face.png" alt="face" width="100" height="100">
+                                </a>
+						    </div>-->
+						    <div class="sm in">
+						        <a href="https://nl.linkedin.com/in/maikelmast" title="zakelijke informatie" target="_blank">
+    						        <img src="img/sm/square/in.png" alt="in" width="100" height="100">
+						        </a>
+						    </div>
+						    <!--<div class="sm v">
+						        <a href="https://vimeo.com/maikelmast" title="video" target="_blank">
+    						        <img src="img/sm/square/v.png" alt="v" width="100" height="100">
+						        </a>
+						    </div>-->
+						    <div class="sm tw">
+                                <a href="https://twitter.com/iaMMast" title="overige informatie" target="_blank">
+                                    <img src="img/sm/square/tw.png" alt="tw" width="100" height="100">
+                                </a>
+						    </div>
+						    <div class="sm plus">
+						        <a href="https://plus.google.com/+MaikelMast" title="development informatie" target="_blank">
+    						        <img src="img/sm/square/g%2B.png" alt="g%2B" width="100" height="100">
+						        </a>
+						    </div>
+						    <div class="sm fm">
+						        <a href="http://www.last.fm/user/MaikelM" title="muziek" target="_blank">
+    						        <img src="img/sm/square/fm.png" alt="fm" width="100" height="100">
+						        </a>
+						    </div>
+						    <div class="sm yt">
+						        <a href="https://www.youtube.com/c/MaikelMast" title="video" target="_blank">
+    						        <img src="img/sm/square/yt.png" alt="yt" width="100" height="100">
+						        </a>
+						    </div>
+						</div>
 					</div>
 					
-					<div class="col-md-1">
-						<h3>Menu</h3>
-						<ul>
-							<li role="presentation" class="home active">
-								<a href="#home">
-									Welkom
-								</a>
-							</li>
-							<li class="about" role="presentation">
-								<a href="#about">
-									Over mij
-								</a>
-							</li>
-							<li class="portfolio" role="presentation">
-								<a href="#portfolio">
-									Portfolio
-								</a>
-							</li>
-							<li class="contact" role="presentation">
-								<a href="#contact">
-									Contact
-								</a>
-							</li>
-						</ul>
+					<div class="col-md-4">
+    					
+        				<div class="testblock">
+        					<div class="playBtn playSub">
+        					    <div class="tri-btn">
+        						    <div class="tri"></div>
+        						</div>
+        						<a href="#"></a>
+        						<h1 class="tri-text">Animatie laten maken?</h1>
+        					</div>
+        				</div>
+        					
+    					
 					</div>
 				</div>
 			</div>
+			
 		</div>
-		
-		<a href="#" title="Reset de pagina naar de begin positie" class="backTop"> Back to top </a>
 		
 		
 		<!--------------------------//
@@ -534,20 +709,15 @@
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							(In opdracht van- en in samenwerking met Movements Group B.V.)
+							DiGiCity is een initiatief van Movements Group B.V. Het is een website dat dient als een startpagina voor alle steden van Nederland. Gebruikers kunnen meer informatie vinden over een stad naar keus. Zo kan je makkelijk en snel de beste winkels, restaurants of andere gelegenheden vinden.
 						</p>
-						
 						<p>
-							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
-							<a href="img/portfolio/sites/digicity/landing.php" title="digicity redesign" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Het bovenstaande project is een <u>demo</u> voor een complete re-design van de huidige website. De huidige website is te vinden op <a href="http://digicity.nl" title="digicity" target="_blank">digicity.nl</a>. Een demo van mijn re-design is te vinden door op de bovenstaande afbeelding of <a href="img/portfolio/sites/digicity/landing.php" title="digicity redesign" target="_blank">hier te klikken</a>.
 						</p>
-						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -563,27 +733,24 @@
 					<div class="modal-body">
 						
 						<div class="imgLink">
-							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
-								<img src="img/portfolio/dopper.png" alt="valkenswaard" width="1920" height="1080" />
+							<a href="img/portfolio/sites/dopper/index.html" title="valkenswaard website" target="_blank">
+								<img src="img/portfolio/dopper.png" alt="dopper" width="1920" height="1080" />
 							</a>
 							<div class="imgLinkText">Demo</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+				            Dit is een “proof-of-concept” website. Een nieuwe jas voor een bestaande website van Dopper. De Dopper website was toe aan een nieuw design en dit was een “idee” of “schets”. Deze website is gemaakt in teamverband.
+				        </p>
 						
 						<p>
-							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
-							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
-								hier
-							</a> 
-							te klikken.
+    						Kort na dit ontwerp kwam Dopper met een <a href="http://dopper.nl/" title="dopper" target="_blank"> gloednieuwe website </a> maar onze versie staat in de vorm van een <u>demo</u> online. 
+							Bekijk de demo door op de bovenstaande afbeelding of <a href="#" title="dopper redesign" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -600,26 +767,24 @@
 						
 						<div class="imgLink">
 							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
-								<img src="img/portfolio/dopper.png" alt="valkenswaard" width="1920" height="1080" />
+								<img src="img/portfolio/seniorenvalkenswaard.png" alt="valkenswaard" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Demo</div>
+							<div class="imgLinkText">Website</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							(In opdracht van- en in samenwerking met Movements Group B.V.)
+                            De stichting Seniorenbelang Valkenswaard (SBV) kwam met de opdracht om een nieuwe website te ontwikkelen. De website moest veel van de bestaande functionaliteit en vormen behouden, maar het moest veel moderner. Dit laat maar weer eens zien dat een re-design meer kan zijn dan alleen maar een compleet nieuwe uitstraling voor je bedrijf (of stichting). Immers wil je niet altijd de herkenbaarheid van je website verliezen.
+				        </p>
 						
 						<p>
-							Bekijk de <u>demo</u> door op de bovenstaande afbeelding- of 
-							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							De website staat nu <u>live</u> dus neem een kijkje op 
+							<a href="http://seniorenvalkenswaard.nl/" title="valkenswaard website" target="_blank">seniorenvalkenswaard.nl</a> of klik op de bovenstaande afbeelding.
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -642,20 +807,18 @@
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+				            (In opdracht van- en in samenwerking met Movements Group B.V.)
+                            Ook deze website is gemaakt in opdracht van Movements Group B.V. Deze pagina is ontwikkeld om een nieuwe dienst te promoten. Movements Group wilt ondernemers helpen door middel van professioneel advies.
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							De website staat nu <u>live</u> dus neem een kijkje op 
+							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">ondernemen.movements.nl</a> of klik op de bovenstaande afbeelding.
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -674,24 +837,20 @@
 							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
 								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">Video</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+				            Dit is een animatie gemaakt om meer informatie te geven over Gelderland Valoriseert. De animatie is gemaakt met een team van vier. Zelf was ik verantwoordelijk voor het animeren en bewerken van de beelden.
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Je kan de <u>video</u> bekijken door op de bovenstaande afbeelding of <a herf="#" title="gelderland valoriseert" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -710,24 +869,20 @@
 							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
 								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">Video</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							Dit is een korte clip ontwikkeld voor de Arnhem Mode Biënnale. Deze clip is onderdeel van de <a href="#" data-toggle="modal" data-target=".dopperPort">“Dwangbuis” livestream</a>. De clip is gemaakt met een team van vier personen. Ik speelde de rol van cameraman en ik heb de beelden bewerkt (met After Effects).
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Je kan de <u>video</u> bekijken door op de bovenstaande afbeelding of <a href="#" title="sjamanistisch ritueel" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -743,27 +898,23 @@
 					<div class="modal-body">
 						
 						<div class="imgLink">
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							<a href="img/portfolio/kerstkaart.png" title="kerstkaart" target="_blank">
+								<img src="img/portfolio/kerstkaart.png" alt="kerstkaart" width="1920" height="1080">
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">Afbeelding</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							De bovenstaande kerstkaart moet laten zien wat je kan verwachten van mijn kennis over Illustrator en grafisch design. De kerstkaart is al wel een aantal jaar oud, maar het geeft hopelijk een goed beeld. Deze afbeelding zal meer betekenen voor kenners.
 						</p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+    						Bekijk de <u>afbeelding</u> in groot formaat door op de bovenstaande afbeelding of <a href="#" title="kerstkaart" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -782,24 +933,20 @@
 							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
 								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">Video</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+						    Dwangbuis is een eenmalige livestream ontwikkeld voor de Arnhem Mode Biënnale. Het is een abstracte en alternatieve livestream dat twee mode ontwerpers tegenover elkaar zet om een discussie aan te gaan. Ze kunnen elkaar echter alleen zien via een serie beeldschermen met daarop een onderdeel van de andere persoon.	
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Je kan de <u>video</u> bekijken door op de bovenstaande afbeelding of <a href="#" title="dwangbuis" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -815,27 +962,25 @@
 					<div class="modal-body">
 						
 						<div class="imgLink">
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							<a href="http://www.apparelle.nl/" title="Apparelle" target="_blank">
+								<img src="img/portfolio/apparelle.png" alt="apparelle" width="1920" height="1080" />
 							</a>
 							<div class="imgLinkText">Website</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							(In opdracht van- en in samenwerking met Movements Group B.V.)
+                            Twee mode winkels in Beuningen hebben het besluit genomen om de krachten te bundelen. Shoe-Elle en Apparenza gaan nu al een tijdje door het leven als Apparelle. Bij een nieuwe naam hoort een nieuwe huisstijl en ook website.
+                        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							De website staat nu <u>live</u> dus neem een kijkje op 
+							<a href="http://apparelle.nl" title="apparelle" target="_blank">apparelle.nl</a> of klik op de bovenstaande afbeelding.
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -851,27 +996,24 @@
 					<div class="modal-body">
 						
 						<div class="imgLink">
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							<a href="img/portfolio/sites/kidsweek/index.html" title="Kidsweek Junior" target="_blank">
+								<img src="img/portfolio/kidsweek.png" alt="kidsweek" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">Demo</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							Dit is een “proof-of-concept” om een voorbeeld te bieden dat aantoont dat de 
+							<a href="http://www.kidsweek.nl/" title="kidsweek" target="_blank">huidige Kidsweek Junior website</a> een stuk versimpeld kan worden. Deze website is meer een snelle “schets” aangezien het binnen een paar dagen gerealiseerd is.
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Een <u>demo</u> van mijn re-design is te vinden door op de bovenstaande afbeelding of <a href="#" title="kidsweek redesign" target="_blank">hier te klikken</a>.
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -890,24 +1032,20 @@
 							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
 								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">3D model</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							Ik zal heel eerlijk zijn, de Dodge Challenger staat op mijn portfolio om te laten zien dat ervaring heb met het ontwikkelen van 3D modellen. De Dodge Challenger geeft hopelijk een goed beeld voor de mensen die geïnteresseerd zijn in 3D.
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Bekijk de Dodge Challanger in groot formaat door op de bovenstaande afbeelding of <a href="#" title="dodge challenger" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
@@ -923,33 +1061,30 @@
 					<div class="modal-body">
 						
 						<div class="imgLink">
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								<img src="img/portfolio/movementsgroup.jpg" alt="movementsgroup" width="1920" height="1080" />
+							<a href="http://ondernemen.movements.nl/" title="de blob" target="_blank">
+								<img src="img/portfolio/blob.png" alt="blob" width="1920" height="1080" />
 							</a>
-							<div class="imgLinkText">Website</div>
+							<div class="imgLinkText">Game</div>
 						</div>
 						
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+							De Blob is een spel gemaakt met Swift voor de iPhone. Het spel is echter niet verkrijgbaar in de App Store omdat het een persoonlijk project is. Het spel is ontwikkeld in een team van vijf. Mijn taak was voornamelijk het programmeren van de game.
+				        </p>
 						
 						<p>
-							Bekijk de <u>live website</u> door op de bovenstaande afbeelding- of 
-							<a href="http://ondernemen.movements.nl/" title="ondernemen voor movements group" target="_blank">
-								hier
-							</a> 
-							te klikken.
+							Om een beter idee te krijgen kan je de video bekijken door op de bovenstaande afbeelding of <a href="#" title="de blob" target="_blank">hier te klikken.</a>
 						</p>
 						
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn-icon btn-icon-dark glyphicon-remove" data-dismiss="modal"><a href="#">Close</a></button>
 					</div>
 				</div>
 			</div>
 		</div>
 		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+		<script src="js/jquery-2.1.3.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="js/script-ck.js" charset="utf-8"></script>
 		<script>
