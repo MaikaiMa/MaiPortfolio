@@ -1,0 +1,258 @@
+body{
+	margin:  0;
+	padding: 0;
+	background: url('../img/bg.png') repeat-x #ceeeff fixed;
+	font-family: verdana, sans-serif;
+	font-size: 14px;
+}
+
+/* Content */
+h1{
+	font-size: 18px;
+	color: #444;
+	margin-top: 0;
+}
+
+p{
+	color: #444;
+}
+
+.contentbox h1{
+	padding: 30px 30px 0 0;
+}
+
+.contentbox p{
+	padding:  0 30px 30px 0;
+}
+
+.contentbox img{
+	height: 155px;
+	width:  155px;
+	float: left;
+	padding:  30px 20px 0 30px;
+}
+
+.contentbox{
+	background:  white;
+	width: 750px;
+	height: 220px;
+	margin: 0 auto 30px auto;
+	-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	-moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+
+.swatch{
+	width: 25px;
+	height: 25px;
+	float: right;
+}
+
+.blueswatch		{ background-color: #43a6d7; }
+.purpleswatch	{ background-color: #21327c; }
+.greenswatch	{ background-color: #8fa93f; }
+.orangeswatch	{ background-color: #f28e02; }
+.redswatch		{ background-color: #b92123; }
+
+.first{
+	margin-top: 188px;
+	height: 390px;
+}
+
+/* Header */
+#header{
+	background: url('../img/bg.png') repeat-x;
+	width: 800px;
+	height: 135px;
+	position: fixed; top: 0; left: 50%; margin-left: -400px;
+	z-index:  999;
+}
+
+#logokw{
+	background: url('../img/kidsweeklogo.png');
+	width: 130px;
+	height: 90px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+#menufunziecontainer{
+	width: 290px; height: 107px;
+	position: fixed; top: 36px; left: 50%; margin-left: -230px;
+	z-index: 1000;
+}
+
+#menufunzie{
+	width: 111px; height: 107px;
+	background: url('../img/menufunzie.png');
+	float: left;
+}
+
+#menufunzieballoon{
+	width: 179px; height: 72px;
+	background: url('../img/menufunzieballoon.png');
+	float: left;
+	pointer-events: none;
+}
+
+#menufunzieballoon p{
+	padding: 8px;
+	text-align: center;
+}
+
+#parafunzie{
+	width:  84px; height: 100px;
+	background: url('../img/parafunzie.png');
+	position: absolute; top: 50%; right: 5%;
+	z-index: -5;
+}
+
+#paperplane{
+	width: 235px; height: 170px;
+	background: url('../img/paperplane.png');
+	position: fixed; bottom: 10%; left: 10%;
+	z-index: -5;
+}
+
+/* Log-in form */
+#loginbox{
+	background: url('../img/loginbox.png');
+	width: 265px;
+	height: 100px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+}
+
+#loginbox textarea{
+	float: left;
+	margin: 30px 0 0 30px;
+	resize: none;
+	width:  85px;
+}
+
+.login{
+	margin-left: 30px;
+	width: 88px;
+}
+
+.meldaan{
+	margin: 15px 0 0 30px;
+	width: 88px;
+}
+
+/* Navigation */
+#nav{
+	list-style: none;
+	font-size: 18px;
+}
+
+#nav li{
+	float: left;
+	margin-right: 25px;
+	padding: ;
+}
+
+#nav li a{
+	text-decoration: none;
+	color: white;
+}
+
+#nav li a:hover{
+	color: white;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+
+#menubar textarea{
+	width: 200px;
+	resize: none;
+}
+
+.navborder{
+	border-right:  1px solid white;
+	padding-right: 50px;
+}
+
+#home .home a,
+#nieuws .nieuws a,
+#sport .sport a,
+#media .media a,
+#interactief .interactief a{
+	color: white;
+	cursor: default;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+
+
+/* Menu */
+#menu{
+	width: 800px;
+	height: 74px;
+	position: fixed; top: 130px; left: 50%; margin-left: -400px;
+	z-index: 999;
+}
+
+#menubar{
+	width: 752px;
+	height: 57px;
+	float: left;
+}
+
+#menubackoverlay{
+	background: url('../img/menubackoverlay.png') repeat;
+	width: 752px;
+	height: 21px;
+	position: fixed; top: 187px; left: 50%; margin-left: -376px;
+	z-index: -1;
+}
+
+
+#menuback{
+	width: 100%;
+	height: 61px;
+	position: fixed; top: 147px;
+	z-index: -10;
+}
+
+.menuclip{
+	height: 74px;
+	width: 24px;
+	float: left;
+}
+
+/* Menu Colorpicker */
+.menucliplblue	 { background: url('../img/menucliplblue.png') no-repeat; }
+.menucliplgreen	 { background: url('../img/menucliplgreen.png') no-repeat; }
+.menucliplred  	 { background: url('../img/menucliplred.png') no-repeat; }
+.menucliplpurple { background: url('../img/menucliplpurple.png') no-repeat; }
+.menucliplorange { background: url('../img/menucliplorange.png') no-repeat; }
+
+.menucliprblue	 { background: url('../img/menucliprblue.png') no-repeat; }
+.menucliprgreen	 { background: url('../img/menucliprgreen.png') no-repeat; }
+.menucliprred  	 { background: url('../img/menucliprred.png') no-repeat; }
+.menucliprpurple { background: url('../img/menucliprpurple.png') no-repeat; }
+.menucliprorange { background: url('../img/menucliprorange.png') no-repeat; }
+
+.menublue		{ background: url('../img/menublue.png') repeat-x; }
+.menugreen		{ background: url('../img/menugreen.png') repeat-x; }
+.menured		{ background: url('../img/menured.png') repeat-x; }
+.menupurple		{ background: url('../img/menupurple.png') repeat-x; }
+.menuorange		{ background: url('../img/menuorange.png') repeat-x; }
+
+.menubackblue	{ background: url('../img/menublue.png') repeat-x; }
+.menubackgreen	{ background: url('../img/menugreen.png') repeat-x; }
+.menubackred	{ background: url('../img/menured.png') repeat-x; }
+.menubackpurple	{ background: url('../img/menupurple.png') repeat-x; }
+.menubackorange	{ background: url('../img/menuorange.png') repeat-x; }
+
+/* Footer */
+#footer{
+	width: 100%;
+	height: 165px;
+	background: url('../img/footerbg.png') repeat-x;
+	position:  fixed; bottom:  0;
+	z-index: -1;
+}
