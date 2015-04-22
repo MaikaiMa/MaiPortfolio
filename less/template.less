@@ -10,9 +10,37 @@
 //--------------
 
 // Colors
-@mainOrange: #f79445;
-@mainBody: #333;
-@mainGray: #6c6b6a;
+@colorMain: #f79445;
+@colorMainDark: #d94a3d;
+@colorMainLight: #f2Cea2;
+
+@colorSub: #2983a6;
+@colorSubDark: #1c4d8c;
+@colorSubLight: lighten(#2983a6, 10%);
+
+// Black and white
+@black: #000;
+@grey-90: lighten(@black, 10%);
+@grey-80: lighten(@black, 20%);
+@grey-70: lighten(@black, 30%);
+@grey-60: lighten(@black, 40%);
+@grey-50: lighten(@black, 50%);
+@grey-40: lighten(@black, 60%);
+@grey-30: lighten(@black, 70%);
+@grey-20: lighten(@black, 80%);
+@grey-10: lighten(@black, 90%);
+@white: #fff;
+
+// Shadow
+@shadowLight: fade(@black, 20%);
+@shadow: fade(@black, 50%);
+@shadowDark: fade(@black, 80%);
+
+// Glow
+@glowFull: fade(@white, 90%);
+@glowDark: fade(@white, 80%);
+@glow: fade(@white, 50%);
+@glowLight: fade(@white, 20%);
 
 // Fonts
 @body: 'Gentium Basic', serif;
@@ -40,12 +68,12 @@ html, body{
 p{
 	font-family: @body;
 	font-size: 0.9em;
-	color: fade(@mainBody, 70%);
+	color: @grey-50;
 }
 
 h1, h2, h3, h4, h5{
 	font-family: @heading;
-	color: @mainBody;
+	color: @grey-50;
 	font-weight: 100;
 }
 
@@ -60,7 +88,7 @@ h2{
 
 h5{
 	font-size: 1.5em;
-	color: @mainOrange;
+	color: @colorMain;
 	letter-spacing: 0.2em;
 	padding: 0;
 }
@@ -69,11 +97,194 @@ h6{
 	font-family: @body;
 	font-size: 1em;
 	font-weight: bold;
-	color: @mainOrange;
+	color: @colorMain;
 	text-transform: uppercase;
 	padding: 0;
 }
 
+/*
+.testblock{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: @grey-60;
+}
+*/
+
+@playSize: 40px;
+.playBtn{
+	//position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+	//width: 100%; height: 100%;
+	color: @grey-30;
+	border-color: @grey-30;
+	background: fade(@grey-30, 30%);
+	&:hover{
+		color: @white;
+		border-color: @white;
+		background: fade(@white, 30%);
+		.tri-text{
+			opacity: 1;
+			.transform( translate(0, 0) );
+		}
+	}
+	.tri-btn{
+		position: relative; //top: 50%; left: 50%;
+		display: inline-block;
+		float: left;
+		//margin: -@playSize/2 0 0 -@playSize/2;
+		padding: @playSize/4 @playSize/3.342;
+		background: inherit;
+		border: 2px solid #fff;
+		border-radius: 100%;
+		border-color: inherit;
+		.tri{
+			width: 0;
+			height: 0;
+			margin-right: -@playSize/15;
+			margin-left: @playSize/15;
+			border-style: solid;
+			border-width: @playSize/4 0 @playSize/4 @playSize/2.4;
+			border-color: transparent transparent transparent inherit;
+		}
+	}
+	a{
+		position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.tri-text{
+		display: inline-block;
+		float: left;
+		margin: 0 0 0 10px;
+		color: inherit;
+		font-size: 1.3em;
+		line-height: @playSize;
+		opacity: 0;
+		.transform( translate(-20px, 0) );
+		.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
+		.transition-transform( .5s, opacity .5s; );
+	}
+}
+
+.playWhite, .playMain, .playSub{
+	.transition( color .3s, border-color .3s, background .3s );
+}
+
+.playWhite{
+	color: @grey-30;
+	border-color: @grey-30;
+	background: fade(@grey-30, 30%);
+	&:hover{
+		color: @white;
+		border-color: @white;
+		background: fade(@white, 30%);
+	}
+}
+
+.playMain{
+	color: @colorMain;
+	border-color: @colorMain;
+	background: fade(@colorMain, 30%);
+	&:hover{
+		color: @colorMainLight;
+		border-color: @colorMainLight;
+		background: fade(@colorMainLight, 30%);
+	}
+}
+
+.playSub{
+	color: @colorSub;
+	border-color: @colorSub;
+	background: fade(@colorSub, 30%);
+	&:hover{
+		color: @colorSubLight;
+		border-color: @colorSubLight;
+		background: fade(@colorSubLight, 30%);
+	}
+}
+
+.btn-icon{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 65px;
+	padding: 0;
+	margin: 0 0 20px;
+	overflow: hidden;
+	border: none;
+	border-radius: 0;
+	background: transparent;
+	.transition( all .3s );
+	.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
+	&:before, &:after{
+		position: absolute;
+		display: inline-block;
+		font-family: 'Glyphicons Halflings';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.8em;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		.transform( translate(-15px, -150%) );
+		.transition-transform( .3s );
+		.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
+	}
+	&-small{
+		display: inline-block;
+		width: auto;
+		font-size: .8em;
+		background: @white;
+		&:before, &:after{
+			font-size: 1.5em;
+			color: @colorMain;
+		}
+	}
+	&-light{
+		background: @glow;
+		&:before, &:after, a{
+			color: @grey-80;
+		}
+		
+	}
+	&-dark{
+		background: @shadow;
+		&:before, &:after, a{
+			color: @white;
+		}
+	}
+	a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		text-shadow: none;
+		text-align: center;
+		font-size: 1.2em;
+		.transform( translate(0, 0) );
+		.transition-transform( .3s );
+		.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );	
+	}
+	input[type="submit"]{
+		position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: rgba(0, 0, 0, 0);
+	}
+	&:hover{
+		&:before, &:after{
+			.transform( translate(-15px, 60%) );
+		}
+		a, input[type="send"]{
+			.transform( translate(0, 150%) );
+		}
+	}
+}
 
 //--------------
 //	!Header
@@ -82,17 +293,17 @@ h6{
 .header{
 	width: 100%;
 	height: 55px;
-	background-color: rgba(255, 255, 255, .9);
-	box-shadow: 0 0 15px -5px rgba(0, 0, 0, .6);
+	background-color: @glowDark;
+	box-shadow: 0 0 15px -5px @shadow;
 	position: fixed; top: 0; left: 0;
-	z-index: 10;
-	.transition(background 0.3s ease-in-out);
+	z-index: 100;
+	.transition( background 0.3s );
 	.mainMenu ul{
 		margin: 7px auto 0;
 		float: right;
 		&.nav-pills>li>a{
 			padding: 5px 10px;
-			.transition(padding 0.3s ease-in-out);
+			.transition( padding 0.3s );
 		}
 	}
 	.mobileLink{
@@ -101,16 +312,16 @@ h6{
 		margin-top: 12px;
 		font-size: 1.4em;
 		.lines{
-			background: @mainOrange;
+			background: @colorMain;
 			&:before,
 			&:after{
-				background: @mainOrange;
+				background: @colorMain;
 			}
 		}
 		.mobileBtn{
 			font-size: 2em;
 			float: right;
-			.transition(all 0.3s ease-in-out);
+			.transition( all 0.3s );
 			span{
 				float: right;
 			}
@@ -119,28 +330,28 @@ h6{
 	&.transHeader{
 		background-color: transparent;
 		box-shadow: none;
-		color: white;
+		color: @white;
 		.mobileLink{
 			display: none;
 			margin-top: 0;
 			.lines{
-				background: white;
+				background: @white;
 				&:before,
 				&:after{
-					background: white;
+					background: @white;
 				}
 			}
 			.mobileBtn{
 				font-size: 3em;
-				margin-top: 20px;
+				margin-top: 10px;
 				float: right;
-				color: white;
+				color: @white;
 			}
 		}
 		.logoText{
-			margin: 20px 0 0 60px;
+			margin: 16px 0 0 60px;
 			h5, h6{
-				color: white;
+				color: @white;
 			}
 			h5{
 				margin: 0;
@@ -152,39 +363,44 @@ h6{
 		.logo a img{
 			height: 90px;
 			display: block;
-			margin-top: 5px;
+			&.logoWhite{
+				opacity: 1;
+			}
 		}
 		.mainMenu ul{
 			margin: 22px auto 0;
 			&.nav-pills>li.active>a,
 			&.nav-pills>li.active>a:focus,
 			&.nav-pills>li.active>a:hover{
-				background: white;
-				color: @mainOrange;
+				background: @white;
+				color: @colorMain;
 			}
 			&.nav-pills>li>a{
 				padding: 10px 15px;
-				color: white;
+				color: @white;
 				background: transparent;
 			}
 			&.nav-pills>li a:hover{
-				background: rgba(255, 255, 255, .5);
+				background: @glow;
 			}
 		}
+	}
+	div.logoGroup{
+		padding: 3px;
 	}
 	.logo{
 		position: relative;
 		float: left;
 		a{
+			display: block;
 			border: none;
 			text-decoration: none;
 			img{
-				position: absolute; left: 0;
 				height: 50px;
 				width: auto;
-				margin-top: 3px;
-				.transition(all 0.3s ease-in-out);
-				&.logoWhite.makeOrange{
+				.transition( all 0.3s );
+				&.logoWhite{
+					position: absolute; left: 0; top: 0;
 					opacity: 0;
 				}
 			}
@@ -192,12 +408,14 @@ h6{
 	}
 	.logoText{
 		margin: 3px 0 0 40px;
-		.transition(margin 0.3s ease-in-out);
+		.transition( margin 0.3s );
 		h5{
 			margin: 0;
+			.transition( color 0.3s );
 		}
 		h6{
 			margin: -3px 0 0;
+			.transition( color 0.3s );
 		}
 	}
 }
@@ -205,15 +423,16 @@ h6{
 a.backTop{
 	position: fixed; bottom: 20px; right: 20px;
 	width: 55px;
-	height: 55px;
+	height: 60px;
 	margin-top: 17px;
 	padding: 5px;
 	float: right;
 	z-index: 15;
 	
-	background: @mainOrange;
-	box-shadow: 0 0 20px -8px rgba(0, 0, 0, .4);
-	color: white;
+	background: @colorMain;
+	box-shadow: inset 0 -4px 0 darken(@colorMain, 20%), 0 0 20px -8px @shadow;
+	color: @white;
+	border-radius: 2px;
 	opacity: 0;
 	
 	font-size: 16px;
@@ -221,9 +440,45 @@ a.backTop{
 	text-decoration: none;
 	line-height: 22px;
 	
-	.transition(all 0.3s ease-in-out);
+	.transition( opacity 0.3s, bottom .2s, background .2s, box-shadow .2s );
+	&:hover{
+		bottom: 18px;
+		background: lighten(@colorMain, 5%);
+		box-shadow: inset 0 -3px 0 darken(@colorMain, 20%), 0 0 20px -8px @shadow;
+	}
 	&.show{
 		opacity: 1;
+		&.stickBottom{
+			position: relative; bottom: 100px;
+		}
+	}
+}
+
+.header{
+	.logoGroup{
+		display: inline-block;
+		padding: 5px;
+		border-radius: 5px;
+		.transition( background .3s );
+		&:hover{
+			> .logo a img.logoWhite{
+				opacity: .3;
+			}
+			> .logoText h6, .logoText h5{
+				color: lighten(@colorMain, 10%);
+			}
+		}
+	}
+	&.transHeader{
+		.logoGroup:hover{
+			background: @glowLight;
+			> .logo a img.logoWhite{
+				opacity: 0;
+			}
+			> .logoText h6, .logoText h5{
+				color: @colorMain;
+			}
+		}
 	}
 }
 
@@ -232,15 +487,31 @@ a.backTop{
 //--------------
 
 .fullPage{
+	position: relative;
 	width: 100%;
-    height: 100%;
+    //height: 99%;
     min-height: 100%;
-    height: auto;
+    &:after{
+	    content: '';
+	    pointer-events: none;
+	    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: @shadow;
+	    z-index: 99;
+	    opacity: 0;
+	    .transition( opacity .3s );
+    }
+    &.overlay:after{
+	    opacity: 1;
+    }
 	.container{
 		position: relative; top: 0; left: 0;
 		display: table;
-		height: 100%;
+		height: 99%;
+		min-height: 100%;
 		z-index: 5;
+		padding-top: 65px;
 		.vAlign{
 			padding: 40px 0;
 			display: inline-block;
@@ -261,12 +532,12 @@ a.backTop{
     height: 100%;
     min-height: 100%;
     height: auto;
-    background: @mainOrange;
-    z-index: 20;
+    background: @colorMain;
+    z-index: 9999;
     box-shadow: 0 0 50px -10px;
     .transition( left .8s );
     h1{
-	    color: white;
+	    color: @white;
     }
     ul.mobileMenu{
 	    width: 100%;
@@ -286,11 +557,11 @@ a.backTop{
 			    font-size: 1.3em;
 			    font-weight: 100;
 			    text-decoration: none;
-			    color: white;
+			    color: @white;
 			    border: none;
 			    .transition( background .3s );
 			    &:hover{
-				    background: rgba(255, 255, 255, .4);
+				    background: fade(@colorMainLight, 30%);
 				    border: none;
 				    text-decoration: none;
 			    }
@@ -301,12 +572,12 @@ a.backTop{
  
 .lines-button{
 	display: inline-block;
-	padding: @button-size/4 @button-size/2;
+	padding: @button-size/6 @button-size/6;
 	cursor: pointer;
 	user-select: none;
 	border-radius: @button-size/7;
 	.transform( rotate(180deg) );
-	.transition( transform 1s, background .3s, top .3s );
+	.transition-transform( 1s, background .3s, top .3s; );
 	.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
 	&:hover{
 		opacity: 1;
@@ -344,7 +615,7 @@ a.backTop{
 	&:after{
 		position: absolute; left:0;
 		content: '';
-		transform-origin: @button-size/14 center;
+		.transform-origin( @button-size/14 center );
 		.line();
 	}
 	&:before{ 
@@ -359,6 +630,10 @@ a.backTop{
 //	!Home		
 //--------------
 
+@digi: #ee584f;
+@valk: #00a5e3;
+@move: #faba00;
+
 #home{
 	&.fullPage{
 		height: 100%;
@@ -371,26 +646,26 @@ a.backTop{
 				width: 100%;
 				min-height: 100%;
 				&.digi{
-					#gradient > .radial(#ee584f; #bc3c33);
+					#gradient > .radial(lighten(@digi, 10%); darken(@digi, 10%));
 				}
 				&.valkenswaard{
-					#gradient > .radial(#00a5e3; #174367);
+					#gradient > .radial(lighten(@valk, 10%); darken(@valk, 10%));
 				}
 				&.movements{
-					#gradient > .radial(#faba00; #e9ad00);
+					#gradient > .radial(lighten(@move, 10%); darken(@move, 10%));
 				}
 				.item-content{
+					position: absolute; top: 0; right: 0; left: 0; bottom: 0;
 					margin: auto;
 					.projectFrame{
 						width: 55%;
 						margin: 0 auto 40px;
-						padding-top: 100px;
 						h1{
 							display: block;
 							margin: 0;
 							border-radius: 5px;
 							
-							color: white;
+							color: @white;
 							font-family: @heading;
 							font-size: 2.5em;
 							font-weight: 100;
@@ -417,7 +692,7 @@ a.backTop{
 						width: 100%;
 						padding: 15px;
 						&.btn-primary{
-							color: white;
+							color: @white;
 						}
 						&.btn-default{
 							margin-right: 40px;
@@ -439,10 +714,11 @@ a.backTop{
 //--------------
 
 #about{
-	background-color: white;
+	//height: 99%;
+	background-color: @white;
 	h1{
-		margin-top: -70px;
-		background: white;
+		background: @white;
+		margin-top: -65px;
 	}
 	h2{
 		text-align: center;
@@ -468,7 +744,7 @@ a.backTop{
 	}
 	.applicationList{
 		width: 730px;
-		margin: auto;
+		margin: 0 auto 60px;
 		button{
 			background: transparent;
 			border: none;
@@ -489,15 +765,14 @@ a.backTop{
 //--------------
 
 #portfolio{
-	background-color: @mainOrange;
+	background-color: @colorMain;
 	img{
 		max-width: 100%;
 		height: auto;
 		margin-bottom: 30px;
 	}
 	h1{
-		margin-top: 65px;
-		color: white;
+		color: @white;
 	}
 }
 
@@ -511,10 +786,10 @@ ul#portfolio-filter{
 	.btn-success,
 	.btn-danger,
 	.btn-info{
-		color: white
+		color: @white
 	}
 	.btn-default{
-		color: @mainBody;
+		color: @grey-50;
 	}
 }
 
@@ -533,7 +808,7 @@ ul#portfolio-list{
 			&:after{
 				opacity: 0.5;
 			}
-			> a img{
+			> img{
 				.transform( rotate(5deg) scale(1.2, 1.2) );
 			}
 			> p span{
@@ -545,9 +820,9 @@ ul#portfolio-list{
 			position: absolute; top: 0; left: 0;
 			width: 100%;
 			height: 100%;
-			background: black;
+			background: @black;
 			opacity: 0;
-			.transition(opacity 0.3s ease-in-out);
+			.transition( opacity 0.3s );
 		}
 		&.interactive p span{
 			background: desaturate(@brand-success, 30%);
@@ -564,7 +839,7 @@ ul#portfolio-list{
 			margin: 0;
 			padding: 0;
 			.transform( rotate(0deg) scale(1,1) );
-			.transition(transform 0.3s ease-in-out);
+			.transition-transform( .3s );
 			.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
 		}
 		&:hover + p{
@@ -581,7 +856,7 @@ ul#portfolio-list{
 			position: absolute; top: 0; left: 0;
 			top: 50%;
 			margin-top: -37px;
-			color: white;
+			color: @white;
 			font-size: .7em;
 			text-align: left;
 			vertical-align: middle;
@@ -590,7 +865,7 @@ ul#portfolio-list{
 				display: inline-block;
 				margin-bottom: 5px;
 				padding: 3px 10px;
-				.transition(transform 0.3s);
+				.transition-transform( .3s );
 				.transform( translate(-150%, 0) );
 				.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
 			}
@@ -599,36 +874,41 @@ ul#portfolio-list{
 }
 
 .modal-body .imgLink{
-	width: 868px;
-	height: 488px;
+	position: relative;
+	width: 100%;
 	overflow: hidden;
 	margin-bottom: 20px;
 	a{
+		display: block;
 		text-decoration: none;
 		img{
 			max-width: 100%;
 			height: auto;
-			box-shadow: 0 0 10px -2px rgba(0,0,0,0.7);
+			box-shadow: 0 0 10px -2px @shadowDark;
 		}
 	}
 	&:hover > .imgLinkText{
-		top: -488px;
+		top: 0;
 	}
 	.imgLinkText{
+		position: absolute; top: 100%;
 		pointer-events: none;
-		
-		position: relative; top: 0;
-		width: 868px;
-		height: 488px;
-		background-color: fade(@mainOrange, 90%);
+		width: 100%;
+		height: 100%;
+		padding-top: 25%;
+		background-color: fade(@colorMain, 90%);
 		.transition( top 0.3s );
+		.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
 		
-		color: white;
+		color: @white;
 		text-align: center;
 		font-family: @heading;
 		font-size: 4em;
-		line-height: 488px;
 	}
+}
+
+.modal-dialog{
+	margin-top: 65px !important;
 }
 
 
@@ -637,24 +917,43 @@ ul#portfolio-list{
 //--------------
 
 #contact{
-	background-color: black;
+	background-color: @black;
+	margin: auto;
+	.container{
+		display: block;
+	}
 	.contactContent{
-		margin-left: 60px;
-		padding-top: 100px;
+		position: relative;
+		display: block;
+		margin: 0 auto 60px;
+		padding: 30px;
+		background: @colorMain;
 		h1{
-			display: inline;
-			background: @mainOrange;
-			color: white;
+			color: @white;
 			text-align: left;
-			padding: 10px;
-			margin-bottom: 10px;
+			margin: 0 0 10px;
 		}
 		h3{
-			display: inline;
-			background: @mainOrange;
-			color: white;
-			padding: 10px;
-			line-height: 40px;
+			color: @white;
+			margin: 10px 0;
+		}
+		.contactForm{
+			display: none;
+			opacity: 0;
+			.transition( opacity .5s );
+			&.show{
+				opacity: 1;
+			}
+			i.hideForm{
+				position: absolute; top: 0; right: 0;
+				padding: 10px;
+				font-size: 1.5em;
+				color: @shadow;
+				.transition( color .3s );
+				&:hover{
+					color: @glow;
+				}
+			}
 		}
 	}
 	#googlemaps{ 
@@ -665,6 +964,128 @@ ul#portfolio-list{
 	}
 }
 
+form{
+	input, textarea{
+		width: 100%;
+		border: 1px solid @grey-20;
+		padding: 10px;
+		margin: 10px 0 20px;
+		border-radius: 2px;
+		box-shadow: 0 0 8px -5px @shadow;
+		.transition( background .8s, border .8s );
+		resize: none;
+	}
+	textarea{
+		padding: 20px 50px;
+		.error{
+			background: @brand-danger;
+			border-color: darken(@brand-danger, 20%);
+			&::-webkit-input-placeholder{
+				color: darken(@brand-danger, 20%);
+			}
+			&::-moz-placeholder{
+				color: darken(@brand-danger, 20%);
+			}
+			&:-ms-input-placeholder{
+				color: darken(@brand-danger, 20%);
+			}
+		}
+	}
+	.labelInput{
+		position: relative;
+		width: 100%;
+		height: 50px;
+		margin: 10px 0 20px;
+		overflow: hidden;
+		background: white;
+		border: 1px solid @grey-20;
+		border-radius: 2px;
+		box-shadow: 0 0 8px -5px @shadow;
+		&.error{
+			background: @brand-danger;
+			border-color: darken(@brand-danger, 20%);
+			label{
+				span.labelText{
+					color: darken(@brand-danger, 20%);
+				}
+				span.glyphicon{
+					color: darken(@brand-danger, 20%);
+				}
+			}
+		}
+		&.active label{
+			span.labelText{
+				opacity: 0;
+				.transform( translate(150px, 0) );
+			}
+			span.glyphicon{
+				.transform( translate(-35px, 0) );
+			}
+		}
+		label{
+			pointer-events: none;
+			position: absolute; top: 12px;
+			color: @grey-30;
+			.transform( translate(50px, 0) );
+			span.glyphicon{
+				position: absolute;
+				font-size: 1.5em;
+				.transform( translate(-100px, 0) );
+				.transition-transform( .3s, color .8s; );
+				.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
+			}
+			span.labelText{
+				opacity: 1;
+				.transform( translate(0, 0) );
+				.transition-transform( .3s, opacity .3s, color .8s; );
+				.transition-timing( cubic-bezier(0.7, 0, 0.3, 1) );
+			}
+		}
+		input{
+			height: 100%;
+			margin: 0;
+			padding-left: 50px;
+			background: transparent;
+			box-shadow: none;
+			border-radius: 0;
+			border: 0;
+		}
+	}
+}
+
+.messageBox{
+	position: fixed; top: 55px; right: 20px;
+	display: none;
+	background: @grey-10;
+	width: 200px;
+	min-height: 55px;
+	padding: 10px;
+	margin-top: 20px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 21px 20px -20px @shadowLight;
+	.box-sizing( border-box );
+	z-index: 20;
+	i{
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px;
+		color: @shadow;
+		.transition( color .3s );
+		&:hover{
+			color: @colorMain;
+		}
+	}
+	p{
+		display: none;
+		margin: 0;
+		padding: 5px 10px;
+		line-height: 1em;
+		color: @shadow;
+	}
+ }
 
 //--------------
 //	!Footer		
@@ -673,14 +1094,76 @@ ul#portfolio-list{
 #footer{
 	padding: 30px 0;
 	background: @gray;
-	box-shadow: inset 0 15px 25px -15px rgba(0,0,0,0.7);
+	box-shadow: inset 0 15px 25px -15px @shadowDark;
+	.smBox{
+		display: inline-block;
+		width: 100%;
+		.box-sizing( border-box );
+		.sm{
+			position: relative; top: 0;
+			display: inline-block;
+			width: 18%;
+			margin-right: 1%;
+			border-radius: 2px;
+			box-shadow: 0 4px 0;
+			.transition( top .2s, box-shadow .2s );
+			&.tw{
+				color: darken(#009fe3, 20%);
+			}
+			&.face{
+				color: darken(#3d5294, 20%);
+			}
+			&.yt{
+				color: darken(#cc181e, 20%);
+			}
+			&.plus{
+				color: darken(#df4a32, 20%);
+			}
+			&.in{
+				color: darken(#0177b5, 20%);
+			}
+			&.v{
+				color: darken(#3d5294, 20%);
+			}
+			&.fm{
+				color: darken(#e52923, 20%);
+			}
+			&:before{
+				content: '';
+				pointer-events: none;
+				position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+				width: 100%;
+				height: 100%;
+				background: @glowLight;
+				border-radius: 2px;
+				opacity: 0;
+				z-index: 1;
+				.transition( opacity .3s );
+			}
+			&:hover{
+				top: 2px;
+				box-shadow: 0 2px 0;
+				&:before{
+					opacity: 1;
+				}
+			}
+			a{
+				width: 100%;
+				height: 100%;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
 	h3{
-		color: white;
+		color: @white;
 		margin-top: 0;
 		padding-top: 0;
 	}
 	h6{
-		color: white;
+		color: @white;
 		font-size: 0.7em;
 		font-weight: 100;
 		font-family: @heading;
@@ -722,11 +1205,27 @@ ul#portfolio-list{
     transition: @value;
 }
 
+.transition-transform( @value ){
+    -webkit-transition: -webkit-transform @value;
+    -moz-transition: -moz-transform @value;
+    -ms-transition: -ms-transform @value;
+    -o-transition: -o-transform @value;
+    transition: transform @value;
+}
+
 .transition-timing( @value: cubic-bezier(0.7, 0, 0.3, 1) ){
 	-webkit-transition-timing-function: @value;
 	-moz-transition-timing-function: @value;
 	-o-transition-timing-function: @value;
 	transition-timing-function: @value;
+}
+
+.transform-origin( @value ){
+	-webkit-transform-origin: @value;
+	-moz-transform-origin: @value;
+	-ms-transform-origin: @value;
+	-o-transform-origin: @value;
+	transform-origin: @value;
 }
 
 
@@ -762,7 +1261,7 @@ ul#portfolio-list{
 	width: @button-size/1.2;
 	height: @button-size/8;
 	border-radius: @button-size/14; 
-	.transition( transform .3s, top .3s );
+	.transition-transform( .3s, top .3s, background .3s; );
 }
 
 //--------------
@@ -823,6 +1322,13 @@ ul#portfolio-list{
 		width: 48%;
 	}
 	
+	#contact{
+		button{
+			display: block;
+			margin-top: 20px;
+		}
+	}
+	
 }
 
 /* !Tablet ------------------------- */
@@ -831,11 +1337,34 @@ ul#portfolio-list{
 		content:' Tablet';
 	}
 	
-	#home .carousel .carousel-inner .item{
-		h1{
-			text-align: left;
-			font-size: 2em;
-			margin-left: 10%;
+	h1{
+		font-size: 2.5em;
+	}
+	
+	h3{
+		font-size: 1.2em;
+	}
+
+	.fullPage{
+			font-size: 0.8em;
+			.container .vAlign{
+				padding: 25px 0;
+			}
+	}
+	
+	#home .carousel .carousel-inner .item .item-content{ 
+		position: relative;
+		.projectFrame{
+			width: 100%;
+			margin-top: 5px;
+			h1{
+				text-align: left;
+				font-size: 1.8em;
+				margin-left: 10%;
+			}
+			img{
+				width: 80%;
+			}
 		}
 		.carousel-caption{
 			position: static;
@@ -843,10 +1372,8 @@ ul#portfolio-list{
 			.btn{
 				font-size: 18px;
 				padding: 15px;
+				margin-top: 20px;
 			}
-		}
-		img{
-			width: 80%;
 		}
 	}
 	
@@ -899,15 +1426,16 @@ ul#portfolio-list{
 		}
 	}
 	
+	form textarea{
+		padding: 10px 20px;
+	}
+	
 	#portfolio{
-		background-color: @mainOrange;
+		background-color: @colorMain;
 		img{
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 30px;
-		}
-		h1{
-			margin-top: 40px;
 		}
 	}
 }
@@ -948,14 +1476,24 @@ ul#portfolio-list{
 		.mobileLink{
 			display: block;
 		}
+		.logoText{
+			display: none;
+		}
 		&.transHeader{
+			.logo a img{
+				height: 75px;
+				width: auto;
+			}
 			.mobileLink{
 				display: block;
+				.mobileBtn{
+					font-size: 2.4em;
+				}
 			}
 		}
 	}
 	
-	.logoText{
+	.cv{
 		display: none;
 	}
 	
@@ -967,5 +1505,13 @@ ul#portfolio-list{
 		margin: 0 0 5% 0;
 		padding: 0;
 		width: 100%;
+	}
+	
+	#contact{
+		button{
+			a{
+				margin-top: -10px;
+			}
+		}
 	}
 }
